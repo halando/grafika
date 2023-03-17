@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <style>
+        canvas{
+            display: block;
+            background-color: cyan;
+        }
+        #c1{
+            width: 500mm;
+            height: 200in;
+        }
+    </style>
+    <script>
+        function valami(){
+
+        
+        var c= document.getElementById("c1");
+       // for (var e in c) console.log(e);
+        for (var e in c) console.log(e+":"+c[e]);
+        }
+    </script>
+</head>
+<body onclick="valam();">
+<canvas id = "cl"></canvas>
+<canvas width="200in" height = "200cm"></canvas>
+</body>
+</html>

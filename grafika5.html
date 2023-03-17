@@ -1,0 +1,42 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <canvas id="c1" width="500" height="500"></canvas>
+</body>
+<script>
+    var c = document.getElementById("c1");
+    var rajzlap = c.getContext("2d");
+    rajzlap.beginPath();
+    for (var x = 0; x <= 500; x += 50) {
+        rajzlap.moveTo(x, 0);
+        rajzlap.lineTo(x, 500);
+    }
+    for (var y = 0; y <= 500; y += 50) {
+        rajzlap.moveTo(0, y);
+        rajzlap.lineTo(500, y);
+    }
+    rajzlap.stroke();
+    rajzlap.beginPath();
+    for (var db = 1; db <= 4; db++) {
+        var x = Maht.floor(Math.random() * 494);
+        var y = Maht.floor(Math.random() * 494);
+        rajzlap.fillStyle = "red";
+        rajzlap.fillRect(x, y, 7, 7);
+        if (db == 1) {
+            var eX = x;
+            var eY = y;
+            var elsoX = x;
+            var elsoY = y;
+        } else {
+            rajzlap.moveTo(eX + 3 , eY + 3);/// hogy a 7x7-es közepétől induljon
+            rajzlap.lineTo(x + 3, y + 3);
+            rajzlap.strokeSty
+
+    }
+}
+</script>
+
+</html>

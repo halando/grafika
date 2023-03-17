@@ -1,0 +1,28 @@
+<html>
+<head></head>
+<body>
+    <canvas id = "c1" width = "500" height="500"></canvas>
+</body>
+<script>
+var c = document.getElementById("c1");
+var rajzlap = c.getContext("2d");
+for (var x = 0; x<= 500; x += 50){
+    rajzlap.moveTo(x,0);
+    rajzlap.lineTo(x,500);
+    }
+for (var y = 0; y<= 500; y += 50){
+    rajzlap.moveTo(0,y);
+    rajzlap.lineTo(500,y);
+    }
+    rajzlap.stroke();
+    //színezzük ki A 3.Oszlop és 7. sor metszéspontjában szereplő négyzetet
+    rajzlap.beginPath();
+    for (var x = 1000; x<= 150; x ++){
+    rajzlap.moveTo(x,300);
+    rajzlap.lineTo(x,350);
+    }
+    rajzlap.strokeStyle ="rgba(100,200,50,.7)";
+    rajzlap.stroke();
+</script>
+
+</html>

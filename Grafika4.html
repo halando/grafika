@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <canvas id = "c1" width = "500" height="500">
+
+    </canvas>
+</head>
+
+<body>
+
+</body>
+<script>
+    var rajzlap = c.getContext("2d");
+    rajzlap.beginPath();
+    for (var x = 0; x <= 500; x += 50) {
+        rajzlap.moveTo(x, 0);
+        rajzlap.lineTo(x, 500);
+    }
+    for (var y = 0; y <= 500; y += 50) {
+        rajzlap.moveTo(0, y);
+        rajzlap.lineTo(500, y);
+    }
+    rajzlap.stroke();
+    rajzlap.beginPath();
+    for (var x = 0; x <= 500; x++) {
+        rajzlap.moveTo(x, 0);
+        rajzlap.lineTo(x, 150);
+    }
+    rajzlap.strokeStyle = "rgba(255,0,0,1)";
+    rajzlap.beginPath();
+    for (var x = 0; x <= 500; x++) {
+        rajzlap.moveTo(x, 350);
+        rajzlap.lineTo(x, 500);
+    }
+    rajzlap.strokeStyle = "green";
+    rajzlap.stroke();
+    window.setTimeout(maskent, 60000);
+    function maskent() {
+        rajzlap.fillStyle = "#FF0000";
+        rajzlap.fillRect(0, 350, 500, 150);
+        rajzlap.fillStyle = "#FF0000";
+        rajzlap.fillRect(0, 350, 500, 150);
+    }
+</script>
+
+</html>
